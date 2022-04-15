@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "213327288063",
+    "project_id": "arisankeluargaapp",
+    "storage_bucket": "arisankeluargaapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213327288063:android:459f476ac79ca2ee4e1eca",
+        "android_client_info": {
+          "package_name": "com.geohot.aplikasiarisan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213327288063-g8f51b0o8112n9sd17d56h8h35nk2res.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.geohot.aplikasiarisan",
+            "certificate_hash": "fa7b1733891115bc2ca3e9a5800f77fe98912ab4"
+          }
+        },
+        {
+          "client_id": "213327288063-lndl025sqj2qborf7er1m8sk03ddbfga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrSPn91apN2-i3ZVS2PuyFJxw7C7KsUO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213327288063-lndl025sqj2qborf7er1m8sk03ddbfga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
