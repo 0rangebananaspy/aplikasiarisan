@@ -43,7 +43,7 @@ public class FirebaseInstanceId extends FirebaseMessagingService {
         // Check if message contains a notification payload.
         if (remoteMessage.getNotification() != null) {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
-            notifikasi(remoteMessage.getNotification().getBody(), remoteMessage.getNotification().getTitle());
+            notifikasi(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody());
         }
     }
 
@@ -64,6 +64,8 @@ public class FirebaseInstanceId extends FirebaseMessagingService {
     }
     public void notifikasi(String title, String body){
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("title",title);
+        intent.putExtra("body",body);
         PendingIntent pendingIntent =PendingIntent.getActivity(this,
                 0,intent,PendingIntent.FLAG_ONE_SHOT);
         String channelId = "ID";
@@ -74,10 +76,13 @@ public class FirebaseInstanceId extends FirebaseMessagingService {
                         .setSmallIcon(R.drawable.ic_launcher_foreground)
                         .setContentTitle(title)
                         .setContentText(body)
+                        .setStyle(new NotificationCompat.BigTextStyle()
+                                .bigText(body))
                         .setAutoCancel(true)
                         .setSound(defaultSoundUri)
-                        .setStyle(new NotificationCompat.InboxStyle())
+//                        .setStyle(new NotificationCompat.InboxStyle())
                         .setContentIntent(pendingIntent);
+
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
